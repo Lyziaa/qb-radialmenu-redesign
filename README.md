@@ -1,3 +1,7 @@
+i made this design like for an hour so there could be bugs
+
+Preview : https://youtu.be/16KeYywJp2k
+
 # qb-radialmenu
 Radial Menu Used With QB-Core :arrows_counterclockwise:
 
