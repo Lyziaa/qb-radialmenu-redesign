@@ -1,81 +1,35 @@
-/* Import Exo 2 font as defined in style guide */
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap");
-
-:root {
-    /* Colors */
-    --md-primary: #f44336;
-    --md-on-primary: #ffffff;
-    --md-primary-container: #ffdad6;
-    --md-on-primary-container: #410002;
-    --md-secondary: #d32f2f;
-    --md-on-secondary: #ffffff;
-    --md-surface: #fffbff;
-    --md-on-surface: #1c1b1f;
-    --md-surface-container: #f3edf7;
-    --md-surface-container-high: #ece8f0;
-
-    /* Typography from style guide */
-    --md-typescale-display-large-size: 57px;
-    --md-typescale-display-medium-size: 45px;
-    --md-typescale-display-small-size: 36px;
-    --md-typescale-headline-large-size: 32px;
-    --md-typescale-headline-medium-size: 28px;
-    --md-typescale-headline-small-size: 24px;
-    --md-typescale-title-large-size: 22px;
-    --md-typescale-title-medium-size: 16px;
-    --md-typescale-title-small-size: 14px;
-    --md-typescale-body-large-size: 16px;
-    --md-typescale-body-medium-size: 14px;
-    --md-typescale-body-small-size: 12px;
-    --md-typescale-label-large-size: 14px;
-    --md-typescale-label-medium-size: 12px;
-    --md-typescale-label-small-size: 11px;
-
-    /* Custom SVG menu font sizes */
-    --menu-sector-font-size: 2.8px;
-    --menu-center-font-size: 2.5px;
-
-    /* Font properties */
-    --font-primary: "Exo 2", sans-serif;
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-bold: 700;
-
-    /* Spacing */
-    --md-spacing-small: 8px;
-    --md-elevation-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 h1 {
-    font-weight: var(--font-weight-regular);
-    font-size: var(--md-typescale-headline-large-size);
-    color: var(--md-on-primary);
+    font-weight: normal;
+    color: white;
 }
 
 div.info {
-    margin: var(--md-spacing-small) 0;
+    margin: 12px 0;
 }
 
 div.info * {
-    font-size: var(--md-typescale-body-medium-size);
-    color: var(--md-on-primary);
+    color: white;
 }
 
 #icons {
+    font-size: larger;
+    font-style: bold;
     display: none;
-    filter: url(#drop-shadow);
+    filter:url(#drop-shadow);
 }
 
 .container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 1000px;
 }
 
 #vehicle {
-    fill: var(--md-on-primary);
+    fill: white;
 }
+
 
 div.menuHolder {
     user-select: none;
@@ -85,7 +39,7 @@ div.menuHolder {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    top: 30%;
+    top: 32%;
 }
 
 svg.icons {
@@ -95,7 +49,7 @@ svg.icons {
 svg.menu {
     position: absolute;
     overflow: visible;
-    transition: 0.1s;
+    transition: .1s;
     transition-timing-function: ease-out;
 }
 
@@ -111,8 +65,11 @@ svg.menu.outer {
 }
 
 svg.menu > g > path {
-    fill: rgb(23 23 23 / 80%);
-    box-shadow: var(--md-elevation-1);
+    fill: rgba(0, 0, 0, 0.85);
+}
+
+.sector {
+    transition: all .5s ease;
 }
 
 svg.menu > g.sector > path {
@@ -121,32 +78,45 @@ svg.menu > g.sector > path {
 
 svg.menu > g.sector > text,
 svg.menu > g.sector > use {
-    font-family: var(--font-primary);
+    font-family: 'Poppins', sans-serif;
     margin-top: 5px;
-    font-size: var(--menu-sector-font-size);
+    font-size: 0px;
+    font-weight: bold;
     letter-spacing: 0.2px;
-    text-transform: uppercase;
     cursor: pointer;
-    fill: var(--md-on-primary);
+    fill: white;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1), 1px 1px 1px rgba(1,1,1,1);
+
 }
 
 svg.menu > g.sector:hover > path {
-    fill: var(--md-primary);
+    fill: #0c8d879a;
+    transition: all .5s ease;
+    scale: 5px;
 }
 
 svg.menu > g.center:hover > circle {
-    fill: var(--md-primary);
+    fill:#0c8d879a;
 }
 
 svg.menu > g.center > circle {
     cursor: pointer;
-    fill: rgb(23 23 23 / 80%);
+    fill: rgba(30, 30, 30, 0.425);
 }
 
 svg.menu > g.center > text,
 svg.menu > g.center > use {
     margin-top: 5px;
-    font-size: var(--menu-center-font-size);
+    font-size: 2.5px;
     cursor: pointer;
-    fill: var(--md-on-primary);
+    fill: white;
+}
+
+#centerText {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 10px;
+    transition: all 1s ease;
 }
